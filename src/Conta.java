@@ -1,6 +1,6 @@
 
 public abstract class Conta implements IConta {
-	
+
 	private static final int AGENCIA_PADRAO = 1;
 	private static int SEQUENCIAL = 1;
 
@@ -29,6 +29,11 @@ public abstract class Conta implements IConta {
 	public void transferir(double valor, IConta contaDestino) {
 		this.sacar(valor);
 		contaDestino.depositar(valor);
+	}
+
+	public void verSaldo(int agencia, int numero) {
+		System.out.println("Seu Saldo em Conta Corrente é de: " + saldo);
+
 	}
 
 	public int getAgencia() {
